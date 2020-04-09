@@ -1,1 +1,7 @@
 image: jesterornot/gitpod-wasm
+ports:
+  - port: 8000
+    onOpen: open-preview
+tasks:
+  - init: wasm-pack build --target no-modules
+    command: python3 -m http.server
