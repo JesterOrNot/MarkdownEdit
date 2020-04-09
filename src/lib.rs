@@ -8,7 +8,7 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn markdown_to_html(input: &str) -> String {
-    let translated = mossy::App::exec(String::from(input));
-    log(translated.as_str());
+    let translated = comrak::markdown_to_html(input, &comrak::ComrakOptions::default());
+    log(&translated);
     translated
 }
