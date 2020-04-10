@@ -1,3 +1,4 @@
+html,
 body {
     background-color: #FFFFFF;
 }
@@ -37,4 +38,24 @@ code {
   right: 0.1;
   top: 0%;
   margin-left: 51%;
+}
+
+@media only screen and (max-width: 768px) {
+    .split {
+        height: 50%;
+        width: 100vh;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-y: hidden;
+    }
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0.1;
+        top: 50%;
+        margin-left: 5%;
+    }
 }
