@@ -8,7 +8,12 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn markdown_to_html(input: &str) -> String {
-    let translated = comrak::markdown_to_html(input, &comrak::ComrakOptions::default());
+    let mut options = comrak::ComrakOptions::default();
+    options.ext_table = true;
+    options.ext_strikethrough = true;
+    options.ext_autolink = true;
+    options.github_pre_lang = true;
+    let translated = comrak::markdown_to_html(input, &options);
     log(&translated);
     translated
 }

@@ -1,6 +1,6 @@
 p {
-    font-size: 22px;
-    font-weight: normal;
+  font-size: 22px;
+  font-weight: normal;
 }
 
 .split {
@@ -20,4 +20,16 @@ p {
   right: 0.1;
   top: 0;
   margin-left: 51%;
+}
+
+td,
+tr,
+th {
+  border: 1px solid #000000;
+  padding: 5px;
+}
+
+table {
+  border: 1px solid #000000;
+  border-collapse: collapse;
 }
