@@ -1,7 +1,8 @@
-image: jesterornot/gitpod-wasm
+image:
+  file: .gitpod.Dockerfile
 ports:
   - port: 8000
     onOpen: open-preview
 tasks:
   - init: wasm-pack build --target no-modules
-    command: python3 -m http.server
+    command: cargo +nightly run
