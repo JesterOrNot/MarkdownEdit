@@ -1,17 +1,14 @@
 const MarkdownEdit = "MarkdownEdit"
 const assets = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/pkg",
+  "/www/index.html",
+  "/www/styles.css",
+  "/www/app.js",
+  "/www/favicon.ico",
   "/pkg/package.json",
   "/pkg/markdown_edit.js",
   "/pkg/markdown_edit.d.ts",
   "/pkg/markdown_edit_bg.wasm",
   "/pkg/markdown_edit_bg.d.ts",
-  "/pkg/.gitignore",
-  "/pkg/README.md"
 ]
 let deferredPrompt;
 
@@ -29,7 +26,7 @@ self.addEventListener("fetch", fetchEvent => {
     })
   )
 })
-window.addEventListener('beforeinstallprompt', (e) => {
+self.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
   showInstallPromotion();

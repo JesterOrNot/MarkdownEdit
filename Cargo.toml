@@ -4,6 +4,16 @@ version = "0.1.0"
 authors = ["Sean Hellum <seanhellum45@gmail.com>"]
 edition = "2018"
 
+[workspace]
+members = [
+    ".",
+    "server"
+]
+default-members = [
+    ".",
+    "server"
+]
+
 [lib]
 crate-type = ["cdylib"]
 
