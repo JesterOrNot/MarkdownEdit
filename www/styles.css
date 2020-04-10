@@ -1,5 +1,6 @@
+html,
 body {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 td,
@@ -16,12 +17,13 @@ table {
 
 pre,
 code {
-    background-color: #F8F8F8;
-    color: #333333;
+  background-color: #f8f8f8;
+  color: #333333;
 }
 
 .split {
-  height: 100vh;
+  height: 100%;
+  word-wrap: break-word;
   width: 50%;
   position: fixed;
   z-index: 1;
@@ -37,4 +39,24 @@ code {
   right: 0.1;
   top: 0%;
   margin-left: 51%;
+}
+
+@media only screen and (max-width: 768px) {
+  .split {
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+  }
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0.1;
+    top: 50%;
+    margin-left: 5%;
+  }
 }
