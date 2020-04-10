@@ -1,0 +1,8 @@
+{
+  "name": "MarkdownEdit",
+  "short_name": "MarkdownEdit",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": []
+}
